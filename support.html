@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>الدعم والمساعدة | MasrKey</title>
-  <meta name="description" content="مركز الدعم والمساعدة لتطبيق MasrKey - مفتاح مصر.">
+  <meta name="description" content="مركز الدعم والمساعدة الرسمي لتطبيق MasrKey - مفتاح مصر.">
   <meta name="theme-color" content="#071b2d">
 
   <style>
@@ -19,6 +19,7 @@
       --light: #f5f8fb;
       --white: #ffffff;
       --border: #e3eaf0;
+      --whatsapp: #25d366;
     }
 
     * {
@@ -46,8 +47,6 @@
       width: min(1050px, 92%);
       margin: auto;
     }
-
-    /* HEADER */
 
     header {
       background: var(--navy);
@@ -82,8 +81,6 @@
       color: var(--gold);
     }
 
-    /* HERO */
-
     .hero {
       background:
         radial-gradient(circle at 15% 20%, rgba(244,185,66,.18), transparent 30%),
@@ -113,8 +110,6 @@
       font-size: 16px;
     }
 
-    /* MAIN */
-
     main {
       padding: 65px 0 80px;
     }
@@ -134,8 +129,6 @@
     .section-title p {
       color: var(--muted);
     }
-
-    /* QUICK HELP */
 
     .help-grid {
       display: grid;
@@ -180,8 +173,6 @@
       color: var(--muted);
       font-size: 14px;
     }
-
-    /* FAQ */
 
     .faq {
       max-width: 850px;
@@ -233,59 +224,18 @@
     }
 
     .answer {
-      padding: 0 20px 19px;
+      padding: 15px 20px 19px;
       color: #5c6c77;
       font-size: 14px;
       border-top: 1px solid #edf1f4;
-      padding-top: 15px;
     }
 
     .answer p + p {
       margin-top: 10px;
     }
 
-    /* CONTACT */
-
-    .contact-section {
-      margin-top: 70px;
-    }
-
-    .contact-box {
-      background:
-        radial-gradient(circle at 15% 15%, rgba(244,185,66,.13), transparent 28%),
-        linear-gradient(135deg, #071b2d, #0b304b);
-      color: white;
-      border-radius: 23px;
-      padding: 42px;
-      text-align: center;
-      box-shadow: 0 18px 45px rgba(7,27,45,.14);
-    }
-
-    .contact-box h2 {
-      font-size: 29px;
-      margin-bottom: 8px;
-    }
-
-    .contact-box p {
-      color: #c8d6df;
-      max-width: 620px;
-      margin: 0 auto 23px;
-    }
-
-    .contact-note {
-      display: inline-block;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      color: #d5e1e8;
-      padding: 11px 18px;
-      border-radius: 11px;
-      font-size: 14px;
-    }
-
-    /* DOWNLOAD */
-
     .download-box {
-      margin-top: 25px;
+      margin-top: 18px;
       text-align: center;
     }
 
@@ -298,10 +248,90 @@
       padding: 13px 22px;
       border-radius: 11px;
       font-weight: 900;
-      box-shadow: 0 10px 25px rgba(244,185,66,.20);
     }
 
-    /* FOOTER */
+    .contact-section {
+      margin-top: 70px;
+    }
+
+    .contact-box {
+      background:
+        radial-gradient(circle at 15% 15%, rgba(244,185,66,.13), transparent 28%),
+        linear-gradient(135deg, #071b2d, #0b304b);
+      color: white;
+      border-radius: 23px;
+      padding: 45px 30px;
+      text-align: center;
+      box-shadow: 0 18px 45px rgba(7,27,45,.14);
+    }
+
+    .contact-box h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box > p {
+      color: #c8d6df;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-btn {
+      min-width: 220px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-btn {
+      background: var(--whatsapp);
+      color: #062b15;
+    }
+
+    .email-btn {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .contact-details {
+      margin-top: 27px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 12px;
+      padding: 11px 16px;
+      color: #dce7ed;
+      direction: ltr;
+    }
+
+    .contact-item a {
+      color: white;
+    }
+
+    .support-note {
+      max-width: 700px;
+      margin: 22px auto 0;
+      color: #9fb4c0;
+      font-size: 13px;
+    }
 
     footer {
       background: #03111d;
@@ -340,7 +370,16 @@
       }
 
       .contact-box {
-        padding: 32px 20px;
+        padding: 35px 18px;
+      }
+
+      .contact-btn {
+        width: 100%;
+      }
+
+      .contact-item {
+        width: 100%;
+        overflow-wrap: anywhere;
       }
 
       summary {
@@ -366,8 +405,8 @@
     <div class="label">MASRKEY SUPPORT</div>
     <h1>الدعم والمساعدة</h1>
     <p>
-      إجابات سريعة عن استخدام تطبيق MasrKey وتحميله
-      والبحث عن العقارات وإضافة الإعلانات.
+      مركز الدعم الرسمي لتطبيق MasrKey — مفتاح مصر.
+      هنا تجد إجابات عن أهم الأسئلة وطرق التواصل معنا.
     </p>
   </div>
 </section>
@@ -377,7 +416,7 @@
 
     <div class="section-title">
       <h2>كيف يمكننا مساعدتك؟</h2>
-      <p>اختر الموضوع المناسب أو راجع الأسئلة الشائعة.</p>
+      <p>معلومات سريعة تساعدك في استخدام التطبيق.</p>
     </div>
 
     <div class="help-grid">
@@ -387,7 +426,7 @@
         <h3>البحث عن عقار</h3>
         <p>
           استخدم البحث والفلاتر والمحافظة والمنطقة للوصول إلى
-          العقارات المناسبة.
+          العقارات المناسبة لك.
         </p>
       </div>
 
@@ -395,16 +434,17 @@
         <div class="icon">＋</div>
         <h3>إضافة عقار</h3>
         <p>
-          أضف بيانات العقار والصور والمعلومات المطلوبة من خلال
+          أضف بيانات العقار والصور والتفاصيل المطلوبة من خلال
           خطوات إضافة العقار داخل التطبيق.
         </p>
       </div>
 
       <div class="help-card">
         <div class="icon">↓</div>
-        <h3>تثبيت التطبيق</h3>
+        <h3>تحميل التطبيق</h3>
         <p>
-          MasrKey متاح حاليًا للأندرويد بصيغة APK من الموقع الرسمي.
+          الإصدار الحالي من MasrKey متاح للأندرويد بصيغة APK
+          من الموقع الرسمي.
         </p>
       </div>
 
@@ -412,17 +452,18 @@
 
     <div class="section-title">
       <h2>الأسئلة الشائعة</h2>
-      <p>اضغط على السؤال لعرض الإجابة.</p>
+      <p>اضغط على أي سؤال لعرض الإجابة.</p>
     </div>
 
     <div class="faq">
 
       <details>
         <summary>كيف أحمل تطبيق MasrKey؟</summary>
+
         <div class="answer">
           <p>
-            يمكنك تحميل الإصدار الحالي من الموقع الرسمي لـ MasrKey
-            من خلال زر تحميل التطبيق.
+            يمكنك تحميل الإصدار الحالي مباشرة من الموقع الرسمي
+            لـ MasrKey.
           </p>
 
           <div class="download-box">
@@ -437,92 +478,143 @@
 
       <details>
         <summary>لماذا يظهر تحذير عند تثبيت ملف APK؟</summary>
+
         <div class="answer">
           <p>
             يتم توزيع الإصدار الحالي مباشرة من موقع MasrKey
-            وليس من خلال Google Play، ولذلك قد يعرض Android تنبيهًا
-            أو يطلب السماح بتثبيت تطبيقات من هذا المصدر.
+            وليس من خلال Google Play، ولذلك قد يعرض Android
+            تنبيهًا أو يطلب السماح بالتثبيت من هذا المصدر.
           </p>
+
           <p>
-            استخدم ملف التطبيق الذي تم تحميله من الموقع الرسمي فقط.
+            ننصح بتحميل ملف MasrKey من الموقع الرسمي فقط.
           </p>
         </div>
       </details>
 
       <details>
         <summary>كيف أبحث عن عقار؟</summary>
+
         <div class="answer">
-          استخدم أدوات البحث داخل التطبيق، ويمكنك الاستفادة من
-          خيارات التصفية مثل نوع المعاملة ونوع العقار والمحافظة
-          والمنطقة وفق الخيارات المتاحة.
+          استخدم أدوات البحث داخل التطبيق وخيارات التصفية المتاحة
+          مثل نوع المعاملة ونوع العقار والمحافظة والمنطقة للوصول
+          إلى النتائج المناسبة.
         </div>
       </details>
 
       <details>
         <summary>كيف أضيف عقارًا؟</summary>
+
         <div class="answer">
           انتقل إلى قسم إضافة العقار داخل التطبيق، ثم أكمل الخطوات
-          وأدخل البيانات المطلوبة وأضف الصور والتفاصيل الخاصة بالعقار.
+          وأدخل بيانات العقار وأضف الصور والتفاصيل المطلوبة.
         </div>
       </details>
 
       <details>
         <summary>ما المعلومات التي يجب إدخالها بصورة صحيحة؟</summary>
+
         <div class="answer">
-          يجب الحرص على دقة المعلومات التي تقدمها في الإعلان،
-          وخصوصًا السعر والموقع والمساحة ونوع العقار والوصف والصور
-          وأي معلومات تواصل تقوم بإتاحتها.
+          احرص على دقة السعر والموقع والمساحة ونوع العقار والوصف
+          والصور وأي معلومات تواصل تقوم بإتاحتها في الإعلان.
         </div>
       </details>
 
       <details>
-        <summary>هل MasrKey مسؤول عن صحة كل إعلان؟</summary>
+        <summary>هل يجب التحقق من العقار قبل إتمام أي معاملة؟</summary>
+
         <div class="answer">
-          قد تكون بيانات الإعلانات مقدمة بواسطة المستخدمين أو أصحاب
-          الإعلانات. لذلك يجب التحقق من العقار وبياناته والطرف الآخر
-          والمستندات اللازمة قبل دفع أي مبالغ أو إبرام أي اتفاق.
+          نعم. قد تكون بيانات الإعلانات مقدمة بواسطة المستخدمين
+          أو أصحاب الإعلانات، لذلك يجب التحقق من العقار وبياناته
+          والطرف الآخر والمستندات اللازمة قبل دفع أي مبالغ أو
+          إبرام أي اتفاق.
         </div>
       </details>
 
       <details>
         <summary>ماذا أفعل إذا واجهت مشكلة في التطبيق؟</summary>
+
         <div class="answer">
-          تأكد أولًا من استخدام أحدث إصدار متاح من MasrKey.
-          وإذا استمرت المشكلة، جهز وصفًا واضحًا للمشكلة ونوع الهاتف
-          وإصدار Android والخطوات التي أدت إلى ظهور المشكلة حتى يسهل
-          فحصها عند التواصل مع الدعم.
+          <p>
+            تأكد أولًا من استخدام أحدث إصدار متاح من MasrKey.
+          </p>
+
+          <p>
+            إذا استمرت المشكلة، تواصل مع الدعم عبر واتساب أو البريد
+            الإلكتروني، ويفضل إرسال وصف للمشكلة ونوع الهاتف وإصدار
+            Android والخطوات التي أدت إلى ظهور المشكلة.
+          </p>
         </div>
       </details>
 
       <details>
         <summary>أين أجد سياسة الخصوصية وشروط الاستخدام؟</summary>
+
         <div class="answer">
-          يمكنك الوصول إليهما من روابط الموقع:
+          يمكنك الاطلاع على
           <a href="privacy.html">سياسة الخصوصية</a>
           و
-          <a href="terms.html">شروط الاستخدام</a>.
+          <a href="terms.html">شروط الاستخدام</a>
+          من الموقع الرسمي.
         </div>
       </details>
 
     </div>
 
     <section class="contact-section">
+
       <div class="contact-box">
 
-        <h2>تحتاج إلى مساعدة إضافية؟</h2>
+        <h2>تواصل مع دعم MasrKey</h2>
 
         <p>
-          مركز دعم MasrKey قيد التجهيز لاستقبال الاستفسارات
-          والملاحظات والمشكلات المتعلقة باستخدام التطبيق.
+          إذا لم تجد إجابة لسؤالك، يمكنك التواصل معنا مباشرة
+          عبر واتساب أو البريد الإلكتروني.
         </p>
 
-        <div class="contact-note">
-          MasrKey — مفتاح مصر
-          <br>
-          بيانات التواصل الرسمية ستُضاف هنا.
+        <div class="contact-buttons">
+
+          <a
+            class="contact-btn whatsapp-btn"
+            href="https://wa.me/201129085671?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20MasrKey"
+            target="_blank"
+            rel="noopener">
+            تواصل عبر واتساب
+          </a>
+
+          <a
+            class="contact-btn email-btn"
+            href="mailto:amrhosnilife@gmail.com?subject=MasrKey%20Support">
+            إرسال بريد إلكتروني
+          </a>
+
+        </div>
+
+        <div class="contact-details">
+
+          <div class="contact-item">
+            WhatsApp:
+            <a href="https://wa.me/201129085671" target="_blank" rel="noopener">
+              +20 112 908 5671
+            </a>
+          </div>
+
+          <div class="contact-item">
+            Email:
+            <a href="mailto:amrhosnilife@gmail.com">
+              amrhosnilife@gmail.com
+            </a>
+          </div>
+
+        </div>
+
+        <div class="support-note">
+          عند الإبلاغ عن مشكلة تقنية، يرجى توضيح المشكلة ونوع الهاتف
+          وإصدار Android قدر الإمكان لتسهيل تقديم المساعدة.
         </div>
 
       </div>
+
     </section>
 
   </div>
@@ -539,6 +631,8 @@
       <a href="privacy.html">سياسة الخصوصية</a>
       •
       <a href="terms.html">شروط الاستخدام</a>
+      •
+      <a href="support.html">الدعم</a>
     </div>
 
   </div>
