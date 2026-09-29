@@ -4,11 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MasrKey | بوابتك العقارية في مصر</title>
-  <meta name="description" content="MasrKey منصة عقارية تساعدك على البحث عن العقارات للبيع والإيجار في مصر بسهولة.">
+  <title>MasrKey | مفتاح مصر - بوابتك العقارية في مصر</title>
+  <meta name="description" content="MasrKey - مفتاح مصر، منصة عقارية للبحث عن العقارات للبيع والإيجار وإضافة العقارات واستكشاف الخدمات العقارية في مصر.">
   <meta name="theme-color" content="#071b2d">
 
   <style>
+    :root {
+      --navy: #071b2d;
+      --navy-2: #0b2c46;
+      --navy-3: #0f3b5b;
+      --gold: #f4b942;
+      --gold-light: #ffd875;
+      --text: #17212b;
+      --muted: #667680;
+      --light: #f5f8fb;
+      --white: #ffffff;
+      --border: #e3eaf0;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,192 +30,333 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 85px;
     }
 
     body {
       font-family: Tahoma, Arial, sans-serif;
-      background: #f5f8fb;
-      color: #17212b;
+      background: var(--light);
+      color: var(--text);
       line-height: 1.8;
+      overflow-x: hidden;
     }
 
     a {
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1120px, 92%);
+      width: min(1180px, 92%);
       margin: auto;
     }
 
-    /* Header */
+    /* ================= HEADER ================= */
+
     header {
-      background: #071b2d;
+      background: rgba(7, 27, 45, 0.97);
       color: white;
-      padding: 18px 0;
+      padding: 17px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      box-shadow: 0 4px 22px rgba(0,0,0,.14);
+      backdrop-filter: blur(10px);
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .brand {
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 900;
-      color: #fff;
+      color: white;
+      letter-spacing: .3px;
     }
 
     .brand span {
-      color: #f4b942;
+      color: var(--gold);
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 26px;
       align-items: center;
     }
 
     .nav-links a {
       color: #dce7ef;
-      font-weight: bold;
       font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
     }
 
-    /* Hero */
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-download {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 17px;
+      border-radius: 10px;
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
+      position: relative;
       background:
-        radial-gradient(circle at 15% 20%, rgba(244,185,66,.18), transparent 30%),
-        linear-gradient(135deg, #071b2d, #0d3551);
+        radial-gradient(circle at 12% 18%, rgba(244,185,66,.20), transparent 29%),
+        radial-gradient(circle at 90% 85%, rgba(31,105,151,.25), transparent 30%),
+        linear-gradient(135deg, #061827 0%, #0b2c46 58%, #0d3857 100%);
       color: white;
-      padding: 95px 0 85px;
+      padding: 82px 0 78px;
       overflow: hidden;
     }
 
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border: 1px solid rgba(255,255,255,.05);
+      border-radius: 50%;
+      left: -190px;
+      bottom: -240px;
+    }
+
     .hero-content {
+      position: relative;
+      z-index: 2;
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.08fr .92fr;
       align-items: center;
-      gap: 55px;
+      gap: 65px;
     }
 
     .badge {
-      display: inline-block;
-      background: rgba(244,185,66,.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,185,66,.12);
       border: 1px solid rgba(244,185,66,.45);
-      color: #ffd477;
+      color: var(--gold-light);
       padding: 7px 16px;
       border-radius: 30px;
       font-size: 14px;
       margin-bottom: 20px;
     }
 
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(244,185,66,.8);
+    }
+
     h1 {
-      font-size: clamp(42px, 7vw, 75px);
-      line-height: 1.15;
-      margin-bottom: 15px;
+      font-size: clamp(46px, 7vw, 76px);
+      line-height: 1.08;
+      margin-bottom: 13px;
+      letter-spacing: -1px;
     }
 
     h1 span {
-      color: #f4b942;
+      color: var(--gold);
     }
 
     .hero h2 {
-      font-size: clamp(23px, 3vw, 36px);
-      margin-bottom: 18px;
+      font-size: clamp(24px, 3vw, 37px);
+      margin-bottom: 17px;
+      font-weight: 800;
     }
 
-    .hero p {
+    .hero-text {
       color: #d4e1e9;
       font-size: 18px;
-      max-width: 650px;
-      margin-bottom: 30px;
+      max-width: 660px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
     }
 
     .download-btn {
       display: inline-flex;
+      justify-content: center;
       align-items: center;
       gap: 10px;
-      background: #f4b942;
-      color: #071b2d;
-      padding: 15px 25px;
+      background: linear-gradient(135deg, #f4b942, #ffd36a);
+      color: var(--navy);
+      padding: 14px 24px;
       border-radius: 12px;
       font-weight: 900;
-      font-size: 17px;
-      box-shadow: 0 10px 25px rgba(244,185,66,.22);
-      transition: .2s;
+      font-size: 16px;
+      box-shadow: 0 12px 28px rgba(244,185,66,.20);
+      transition: transform .2s, box-shadow .2s;
     }
 
     .download-btn:hover {
       transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(244,185,66,.27);
+    }
+
+    .outline-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border: 1px solid rgba(255,255,255,.25);
+      color: white;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .outline-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
     .version {
       display: block;
       color: #a9bbc7;
-      margin-top: 13px;
+      margin-top: 14px;
       font-size: 13px;
     }
 
-    /* Phone preview placeholder */
-    .phone {
-      width: 270px;
-      height: 540px;
-      margin: auto;
-      border: 9px solid #e5edf2;
-      border-radius: 38px;
-      background: #fff;
-      box-shadow: 0 30px 60px rgba(0,0,0,.35);
-      padding: 12px;
-    }
+    /* ================= HERO PHONE ================= */
 
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      border-radius: 23px;
-      background: linear-gradient(180deg, #eef5f8, #ffffff);
+    .hero-phone-wrap {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      color: #071b2d;
-      text-align: center;
-      padding: 20px;
+      position: relative;
     }
 
-    .phone-screen .icon {
-      font-size: 65px;
-      margin-bottom: 15px;
+    .hero-phone-glow {
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      background: rgba(244,185,66,.14);
+      filter: blur(65px);
+      border-radius: 50%;
+      top: 22%;
     }
 
-    .phone-screen strong {
-      font-size: 26px;
+    .phone {
+      position: relative;
+      width: 285px;
+      padding: 9px;
+      background: #101820;
+      border: 2px solid #52616c;
+      border-radius: 39px;
+      box-shadow:
+        0 32px 70px rgba(0,0,0,.42),
+        0 0 0 1px rgba(255,255,255,.08);
+      z-index: 2;
     }
 
-    /* Sections */
+    .phone::before {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 19px;
+      background: #101820;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 0 0 13px 13px;
+      z-index: 5;
+    }
+
+    .phone img {
+      width: 100%;
+      border-radius: 29px;
+    }
+
+    /* ================= GENERAL SECTIONS ================= */
+
     section {
-      padding: 80px 0;
+      padding: 82px 0;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 45px;
+      max-width: 730px;
+      margin: 0 auto 45px;
+    }
+
+    .section-label {
+      color: #a87412;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .5px;
+      margin-bottom: 4px;
     }
 
     .section-title h2 {
-      font-size: 34px;
-      color: #071b2d;
+      font-size: clamp(29px, 4vw, 38px);
+      color: var(--navy);
       margin-bottom: 8px;
+      line-height: 1.4;
     }
 
     .section-title p {
-      color: #657580;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: 0 10px 35px rgba(14,38,58,.06);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-box p {
+      color: #586974;
+      font-size: 16px;
+    }
+
+    .about-mark {
+      min-width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-3));
+      color: var(--gold);
+      font-size: 47px;
+      box-shadow: 0 12px 30px rgba(7,27,45,.16);
+    }
+
+    /* ================= FEATURES ================= */
+
+    .features-section {
+      background: #eef3f6;
     }
 
     .features {
@@ -213,116 +367,271 @@
 
     .card {
       background: white;
-      border-radius: 18px;
-      padding: 30px 24px;
-      box-shadow: 0 8px 28px rgba(14,38,58,.07);
-      border: 1px solid #e7edf1;
+      border-radius: 19px;
+      padding: 29px 24px;
+      border: 1px solid #e3eaf0;
+      box-shadow: 0 8px 28px rgba(14,38,58,.06);
+      transition: transform .22s, box-shadow .22s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 36px rgba(14,38,58,.10);
     }
 
     .card-icon {
-      font-size: 34px;
-      margin-bottom: 14px;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff6e3;
+      border-radius: 15px;
+      font-size: 27px;
+      margin-bottom: 16px;
     }
 
     .card h3 {
       color: #0c304a;
       margin-bottom: 7px;
+      font-size: 19px;
     }
 
     .card p {
       color: #667680;
-      font-size: 15px;
+      font-size: 14px;
     }
 
-    /* Screenshots */
+    /* ================= SCREENSHOTS ================= */
+
     .screenshots-section {
-      background: #eaf0f4;
+      background: white;
+      overflow: hidden;
     }
 
     .screenshots {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 28px;
+      align-items: start;
     }
 
-    .screen-placeholder {
-      height: 470px;
-      border-radius: 25px;
-      background: white;
-      border: 1px dashed #a9bac5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .screenshot-card {
       text-align: center;
-      padding: 30px;
-      color: #71828d;
-      box-shadow: 0 10px 30px rgba(14,38,58,.06);
     }
 
-    /* Download */
+    .device {
+      max-width: 290px;
+      margin: auto;
+      padding: 8px;
+      background: #101820;
+      border-radius: 35px;
+      border: 2px solid #394a56;
+      box-shadow: 0 20px 45px rgba(7,27,45,.17);
+      transition: transform .25s;
+    }
+
+    .device:hover {
+      transform: translateY(-7px);
+    }
+
+    .device img {
+      width: 100%;
+      border-radius: 27px;
+    }
+
+    .screenshot-card h3 {
+      color: var(--navy);
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    .screenshot-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .secondary-screens {
+      margin-top: 55px;
+    }
+
+    /* ================= CTA ================= */
+
     .download-section {
-      background: #071b2d;
+      position: relative;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(244,185,66,.13), transparent 28%),
+        linear-gradient(135deg, #061827, #0b304b);
       color: white;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .download-content {
+      max-width: 760px;
+      margin: auto;
     }
 
     .download-section h2 {
-      font-size: 36px;
+      font-size: clamp(31px, 5vw, 43px);
       margin-bottom: 12px;
     }
 
-    .download-section p {
+    .download-section > .container p,
+    .download-content > p {
       color: #c6d5de;
-      margin-bottom: 27px;
+      margin-bottom: 26px;
+      font-size: 17px;
+    }
+
+    .download-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 22px 0 0;
+    }
+
+    .info-chip {
+      padding: 6px 13px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 30px;
+      color: #c5d3dc;
+      font-size: 12px;
+      background: rgba(255,255,255,.04);
     }
 
     .notice {
-      margin: 25px auto 0;
+      margin: 20px auto 0;
       max-width: 700px;
-      color: #aebfc9;
-      font-size: 13px;
+      color: #9eb1bd;
+      font-size: 12px;
     }
 
+    /* ================= FOOTER ================= */
+
     footer {
-      background: #04121f;
-      color: #a8bac5;
-      padding: 28px 0;
+      background: #03111d;
+      color: #9dafbb;
+      padding: 31px 0;
       text-align: center;
       font-size: 14px;
     }
 
-    footer a {
-      color: #f4b942;
-      margin: 0 8px;
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 5px;
     }
 
-    @media (max-width: 850px) {
+    .footer-brand span {
+      color: var(--gold);
+    }
+
+    footer a {
+      color: var(--gold);
+      margin: 0 7px;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
       .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
       }
 
-      .hero p {
+      .hero-text {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .features,
-      .screenshots {
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .features {
         grid-template-columns: 1fr;
+      }
+
+      .screenshots {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-mark {
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding: 14px 0;
       }
 
       .nav-links {
         display: none;
       }
 
-      .phone {
-        width: 235px;
-        height: 470px;
+      .brand {
+        font-size: 25px;
       }
 
       .hero {
-        padding-top: 65px;
+        padding: 58px 0 65px;
+      }
+
+      .hero-content {
+        gap: 45px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .download-btn,
+      .outline-btn {
+        width: 100%;
+        max-width: 330px;
+      }
+
+      .phone {
+        width: 250px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .screenshots {
+        grid-template-columns: 1fr;
+        gap: 43px;
+      }
+
+      .device {
+        max-width: 255px;
+      }
+
+      .secondary-screens {
+        margin-top: 43px;
+      }
+
+      .about-box {
+        padding: 27px 21px;
       }
     }
   </style>
@@ -339,7 +648,7 @@
         <a href="#about">عن التطبيق</a>
         <a href="#features">المميزات</a>
         <a href="#screenshots">صور التطبيق</a>
-        <a href="#download">تحميل</a>
+        <a class="nav-download" href="#download">تحميل التطبيق</a>
       </div>
     </nav>
   </div>
@@ -347,135 +656,264 @@
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-content">
 
       <div>
-        <div class="badge">الإصدار الأول متاح الآن للأندرويد</div>
+        <div class="badge">الإصدار 1.0.0 متاح الآن للأندرويد</div>
 
         <h1>Masr<span>Key</span></h1>
-        <h2>بوابتك العقارية في مصر</h2>
+        <h2>مفتاحك للعقار في مصر</h2>
 
-        <p>
-          تجربة عقارية حديثة تساعدك على البحث والوصول إلى العقارات
-          للبيع والإيجار بسهولة، مع خيارات بحث وتصفية تساعدك في الوصول
-          إلى العقار المناسب.
+        <p class="hero-text">
+          ابحث عن العقارات، استكشف الخيارات المتاحة، أضف عقارك
+          وتعرّف على الخدمات العقارية من خلال تجربة عربية بسيطة
+          ومنظمة صُممت للسوق المصري.
         </p>
 
-        <a
-          class="download-btn"
-          href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
-          ⬇ تحميل MasrKey للأندرويد
-        </a>
+        <div class="hero-actions">
+          <a
+            class="download-btn"
+            href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
+            ↓ تحميل MasrKey للأندرويد
+          </a>
+
+          <a class="outline-btn" href="#screenshots">
+            استكشف التطبيق
+          </a>
+        </div>
 
         <span class="version">
           الإصدار 1.0.0 • Android APK
         </span>
       </div>
 
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="icon">🏠</div>
-          <strong>MasrKey</strong>
-          <p>صورة التطبيق الرئيسية ستظهر هنا</p>
+      <div class="hero-phone-wrap">
+        <div class="hero-phone-glow"></div>
+
+        <div class="phone">
+          <img
+            src="masrkey-home.webp"
+            alt="الصفحة الرئيسية لتطبيق MasrKey">
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <div class="section-title">
-        <h2>عن MasrKey</h2>
-        <p>طريقة أبسط للبحث في السوق العقاري المصري.</p>
-      </div>
 
-      <div class="card">
+      <div class="section-title">
+        <div class="section-label">MASRKEY</div>
+        <h2>تجربة عقارية أقرب إليك</h2>
         <p>
-          MasrKey منصة عقارية تهدف إلى تسهيل عملية البحث عن العقارات
-          وعرض الخيارات المناسبة للمستخدم بصورة منظمة وواضحة،
-          سواء كنت تبحث عن عقار للبيع أو الإيجار.
+          أدوات أساسية في مكان واحد لمساعدتك على استكشاف السوق العقاري.
         </p>
       </div>
+
+      <div class="about-box">
+        <div>
+          <p>
+            <strong>MasrKey — مفتاح مصر</strong> منصة عقارية تهدف إلى
+            تنظيم وتسهيل تجربة البحث عن العقارات في مصر. يمكنك تصفح
+            العقارات المعروضة للبيع والإيجار، استخدام خيارات البحث
+            والتصفية، مشاهدة تفاصيل العقار، إضافة عقارك والوصول إلى
+            مجموعة من الخدمات العقارية من داخل التطبيق.
+          </p>
+        </div>
+
+        <div class="about-mark">⌂</div>
+      </div>
+
     </div>
   </section>
 
-  <section id="features">
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
     <div class="container">
+
       <div class="section-title">
-        <h2>مميزات التطبيق</h2>
-        <p>أدوات تساعدك على الوصول لما تبحث عنه بصورة أسرع.</p>
+        <div class="section-label">المميزات</div>
+        <h2>كل ما تحتاجه للبحث عن عقارك</h2>
+        <p>
+          واجهة عربية واضحة وأدوات تساعدك على الوصول إلى الخيارات المناسبة بصورة أسرع.
+        </p>
       </div>
 
       <div class="features">
 
         <div class="card">
-          <div class="card-icon">🔎</div>
-          <h3>بحث سهل</h3>
-          <p>ابحث عن العقارات من خلال تجربة بسيطة وواضحة.</p>
+          <div class="card-icon">⌕</div>
+          <h3>بحث وتصفية</h3>
+          <p>
+            ابحث عن العقارات واستخدم خيارات التصفية للوصول إلى النتائج المناسبة.
+          </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">📍</div>
-          <h3>بحث حسب الموقع</h3>
-          <p>تصفح العقارات حسب المحافظة والمنطقة.</p>
+          <div class="card-icon">⌖</div>
+          <h3>المحافظات والمناطق</h3>
+          <p>
+            استكشف العقارات حسب المحافظة والمنطقة بطريقة منظمة وسهلة.
+          </p>
         </div>
 
         <div class="card">
-          <div class="card-icon">🏢</div>
-          <h3>أنواع عقارات متعددة</h3>
-          <p>خيارات متعددة تناسب احتياجات البيع والإيجار.</p>
+          <div class="card-icon">⌂</div>
+          <h3>عقارات متنوعة</h3>
+          <p>
+            تصفح أنواعًا مختلفة من العقارات وخيارات البيع والإيجار.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">＋</div>
+          <h3>إضافة عقار</h3>
+          <p>
+            نموذج منظم يساعد على إدخال بيانات العقار وإضافة الصور والتفاصيل.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">▤</div>
+          <h3>تفاصيل واضحة</h3>
+          <p>
+            شاهد بيانات العقار وصوره ومعلوماته الأساسية من صفحة واحدة.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">◆</div>
+          <h3>خدمات عقارية</h3>
+          <p>
+            قسم مخصص للوصول إلى مجموعة من الخدمات المرتبطة بالعقار.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- SCREENSHOTS -->
   <section class="screenshots-section" id="screenshots">
     <div class="container">
 
       <div class="section-title">
+        <div class="section-label">من داخل التطبيق</div>
         <h2>اكتشف MasrKey</h2>
-        <p>سنضع هنا صورًا حقيقية من التطبيق قبل الإطلاق العام.</p>
+        <p>
+          لقطات حقيقية من التطبيق توضح تجربة الاستخدام والوظائف الرئيسية.
+        </p>
       </div>
 
       <div class="screenshots">
 
-        <div class="screen-placeholder">
-          صورة الشاشة الرئيسية
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-home.webp"
+              alt="الشاشة الرئيسية لتطبيق MasrKey"
+              loading="lazy">
+          </div>
+          <h3>الصفحة الرئيسية</h3>
+          <p>وصول سريع للبحث والأقسام والعقارات.</p>
         </div>
 
-        <div class="screen-placeholder">
-          صورة البحث والعقارات
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-search.webp"
+              alt="البحث عن عقار في MasrKey"
+              loading="lazy">
+          </div>
+          <h3>البحث عن عقار</h3>
+          <p>بحث وفلاتر تساعدك على الوصول للنتائج المناسبة.</p>
         </div>
 
-        <div class="screen-placeholder">
-          صورة تفاصيل العقار
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-property-details.webp"
+              alt="تفاصيل العقار في تطبيق MasrKey"
+              loading="lazy">
+          </div>
+          <h3>تفاصيل العقار</h3>
+          <p>الصور والمعلومات الأساسية والتفاصيل في مكان واحد.</p>
         </div>
 
       </div>
+
+      <div class="screenshots secondary-screens">
+
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-add-property.webp"
+              alt="إضافة عقار في تطبيق MasrKey"
+              loading="lazy">
+          </div>
+          <h3>إضافة عقار</h3>
+          <p>خطوات منظمة لإدخال بيانات العقار وإضافة الصور.</p>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-services.webp"
+              alt="خدمات MasrKey العقارية"
+              loading="lazy">
+          </div>
+          <h3>خدماتي</h3>
+          <p>الوصول إلى الخدمات العقارية من داخل التطبيق.</p>
+        </div>
+
+        <div class="screenshot-card">
+          <div class="device">
+            <img
+              src="masrkey-splash.webp"
+              alt="شاشة بداية تطبيق MasrKey"
+              loading="lazy">
+          </div>
+          <h3>MasrKey</h3>
+          <p>هوية مفتاح مصر وتجربة عربية موجهة للسوق العقاري.</p>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
+  <!-- DOWNLOAD -->
   <section class="download-section" id="download">
     <div class="container">
 
-      <h2>ابدأ تجربة MasrKey</h2>
+      <div class="download-content">
+        <h2>جرّب MasrKey الآن</h2>
 
-      <p>
-        حمّل أحدث إصدار من تطبيق MasrKey على هاتف Android.
-      </p>
+        <p>
+          حمّل الإصدار الحالي من تطبيق مفتاح مصر على هاتف Android
+          وابدأ استكشاف تجربة MasrKey العقارية.
+        </p>
 
-      <a
-        class="download-btn"
-        href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
-        ⬇ تحميل التطبيق
-      </a>
+        <a
+          class="download-btn"
+          href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
+          ↓ تحميل MasrKey للأندرويد
+        </a>
 
-      <div class="notice">
-        الإصدار الحالي 1.0.0. قد يطلب Android السماح بتثبيت التطبيقات
-        من خارج Google Play لأن التطبيق يتم توزيعه حاليًا مباشرة.
+        <div class="download-info">
+          <span class="info-chip">الإصدار 1.0.0</span>
+          <span class="info-chip">Android</span>
+          <span class="info-chip">APK</span>
+        </div>
+
+        <div class="notice">
+          ملاحظة: التطبيق يتم توزيعه حاليًا مباشرة بصيغة APK،
+          ولذلك قد يطلب Android السماح بتثبيت التطبيقات من خارج Google Play.
+        </div>
       </div>
 
     </div>
@@ -485,15 +923,25 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 MasrKey — جميع الحقوق محفوظة</p>
 
-    <p>
+    <div class="footer-brand">
+      Masr<span>Key</span>
+    </div>
+
+    <p>مفتاحك للعقار في مصر</p>
+
+    <div class="footer-links">
       <a href="privacy.html">سياسة الخصوصية</a>
       •
       <a href="terms.html">شروط الاستخدام</a>
       •
       <a href="support.html">الدعم</a>
+    </div>
+
+    <p style="margin-top:10px;">
+      © 2026 MasrKey — جميع الحقوق محفوظة
     </p>
+
   </div>
 </footer>
 
