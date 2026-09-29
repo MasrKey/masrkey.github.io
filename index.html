@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MasrKey | بوابتك العقارية في مصر</title>
+  <meta name="description" content="MasrKey منصة عقارية تساعدك على البحث عن العقارات للبيع والإيجار في مصر بسهولة.">
+  <meta name="theme-color" content="#071b2d">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f5f8fb;
+      color: #17212b;
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: #071b2d;
+      color: white;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .brand span {
+      color: #f4b942;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #dce7ef;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(244,185,66,.18), transparent 30%),
+        linear-gradient(135deg, #071b2d, #0d3551);
+      color: white;
+      padding: 95px 0 85px;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(244,185,66,.15);
+      border: 1px solid rgba(244,185,66,.45);
+      color: #ffd477;
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    h1 span {
+      color: #f4b942;
+    }
+
+    .hero h2 {
+      font-size: clamp(23px, 3vw, 36px);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: #d4e1e9;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #f4b942;
+      color: #071b2d;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 17px;
+      box-shadow: 0 10px 25px rgba(244,185,66,.22);
+      transition: .2s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .version {
+      display: block;
+      color: #a9bbc7;
+      margin-top: 13px;
+      font-size: 13px;
+    }
+
+    /* Phone preview placeholder */
+    .phone {
+      width: 270px;
+      height: 540px;
+      margin: auto;
+      border: 9px solid #e5edf2;
+      border-radius: 38px;
+      background: #fff;
+      box-shadow: 0 30px 60px rgba(0,0,0,.35);
+      padding: 12px;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 23px;
+      background: linear-gradient(180deg, #eef5f8, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #071b2d;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .phone-screen .icon {
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
+
+    .phone-screen strong {
+      font-size: 26px;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #071b2d;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #657580;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px 24px;
+      box-shadow: 0 8px 28px rgba(14,38,58,.07);
+      border: 1px solid #e7edf1;
+    }
+
+    .card-icon {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      color: #0c304a;
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: #667680;
+      font-size: 15px;
+    }
+
+    /* Screenshots */
+    .screenshots-section {
+      background: #eaf0f4;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .screen-placeholder {
+      height: 470px;
+      border-radius: 25px;
+      background: white;
+      border: 1px dashed #a9bac5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      color: #71828d;
+      box-shadow: 0 10px 30px rgba(14,38,58,.06);
+    }
+
+    /* Download */
+    .download-section {
+      background: #071b2d;
+      color: white;
+      text-align: center;
+    }
+
+    .download-section h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .download-section p {
+      color: #c6d5de;
+      margin-bottom: 27px;
+    }
+
+    .notice {
+      margin: 25px auto 0;
+      max-width: 700px;
+      color: #aebfc9;
+      font-size: 13px;
+    }
+
+    footer {
+      background: #04121f;
+      color: #a8bac5;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f4b942;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features,
+      .screenshots {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .phone {
+        width: 235px;
+        height: 470px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#">Masr<span>Key</span></a>
+
+      <div class="nav-links">
+        <a href="#about">عن التطبيق</a>
+        <a href="#features">المميزات</a>
+        <a href="#screenshots">صور التطبيق</a>
+        <a href="#download">تحميل</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div>
+        <div class="badge">الإصدار الأول متاح الآن للأندرويد</div>
+
+        <h1>Masr<span>Key</span></h1>
+        <h2>بوابتك العقارية في مصر</h2>
+
+        <p>
+          تجربة عقارية حديثة تساعدك على البحث والوصول إلى العقارات
+          للبيع والإيجار بسهولة، مع خيارات بحث وتصفية تساعدك في الوصول
+          إلى العقار المناسب.
+        </p>
+
+        <a
+          class="download-btn"
+          href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
+          ⬇ تحميل MasrKey للأندرويد
+        </a>
+
+        <span class="version">
+          الإصدار 1.0.0 • Android APK
+        </span>
+      </div>
+
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="icon">🏠</div>
+          <strong>MasrKey</strong>
+          <p>صورة التطبيق الرئيسية ستظهر هنا</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>عن MasrKey</h2>
+        <p>طريقة أبسط للبحث في السوق العقاري المصري.</p>
+      </div>
+
+      <div class="card">
+        <p>
+          MasrKey منصة عقارية تهدف إلى تسهيل عملية البحث عن العقارات
+          وعرض الخيارات المناسبة للمستخدم بصورة منظمة وواضحة،
+          سواء كنت تبحث عن عقار للبيع أو الإيجار.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>مميزات التطبيق</h2>
+        <p>أدوات تساعدك على الوصول لما تبحث عنه بصورة أسرع.</p>
+      </div>
+
+      <div class="features">
+
+        <div class="card">
+          <div class="card-icon">🔎</div>
+          <h3>بحث سهل</h3>
+          <p>ابحث عن العقارات من خلال تجربة بسيطة وواضحة.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <h3>بحث حسب الموقع</h3>
+          <p>تصفح العقارات حسب المحافظة والمنطقة.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>أنواع عقارات متعددة</h3>
+          <p>خيارات متعددة تناسب احتياجات البيع والإيجار.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>اكتشف MasrKey</h2>
+        <p>سنضع هنا صورًا حقيقية من التطبيق قبل الإطلاق العام.</p>
+      </div>
+
+      <div class="screenshots">
+
+        <div class="screen-placeholder">
+          صورة الشاشة الرئيسية
+        </div>
+
+        <div class="screen-placeholder">
+          صورة البحث والعقارات
+        </div>
+
+        <div class="screen-placeholder">
+          صورة تفاصيل العقار
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section" id="download">
+    <div class="container">
+
+      <h2>ابدأ تجربة MasrKey</h2>
+
+      <p>
+        حمّل أحدث إصدار من تطبيق MasrKey على هاتف Android.
+      </p>
+
+      <a
+        class="download-btn"
+        href="https://github.com/MasrKey/masrkey.github.io/releases/download/v1.0.0/MasrKey-v1.0.0.apk">
+        ⬇ تحميل التطبيق
+      </a>
+
+      <div class="notice">
+        الإصدار الحالي 1.0.0. قد يطلب Android السماح بتثبيت التطبيقات
+        من خارج Google Play لأن التطبيق يتم توزيعه حاليًا مباشرة.
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MasrKey — جميع الحقوق محفوظة</p>
+
+    <p>
+      <a href="privacy.html">سياسة الخصوصية</a>
+      •
+      <a href="terms.html">شروط الاستخدام</a>
+      •
+      <a href="support.html">الدعم</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
